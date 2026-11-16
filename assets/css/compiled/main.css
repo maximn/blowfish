@@ -1761,9 +1761,6 @@
   .overscroll-contain {
     overscroll-behavior: contain;
   }
-  .scroll-smooth {
-    scroll-behavior: smooth;
-  }
   .\!rounded-md {
     border-radius: var(--radius-md) !important;
   }
@@ -3126,6 +3123,11 @@
   .data-\[twe-carousel-fade\]\:duration-\[600ms\][data-twe-carousel-fade] {
     --tw-duration: 600ms;
     transition-duration: 600ms;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .motion-safe\:scroll-smooth {
+      scroll-behavior: smooth;
+    }
   }
   @media (prefers-reduced-motion: reduce) {
     .motion-reduce\:transition-none {
